@@ -3,9 +3,12 @@ import { cors } from "hono/cors";
 
 config();
 
-const allowedOrigins = process.env.ANIWATCH_API_CORS_ALLOWED_ORIGINS
-  ? process.env.ANIWATCH_API_CORS_ALLOWED_ORIGINS.split(",")
-  : ["http://localhost:4000", "*"];
+const allowedOrigins = [
+  "http://localhost:4000",
+  "https://createbyadnan.vercel.app",
+  "https://eznine.online",
+  "*"
+];
 
 const corsConfig = cors({
   allowMethods: ["GET"],
